@@ -17,9 +17,6 @@ jobs:
 
       - name: Build 🔧
         run: |
-          pandoc -v
-          ls $GITHUB_WORKSPACE
-          git status
           cd $GITHUB_WORKSPACE
           chmod +x build.sh
           bash build.sh .
@@ -30,14 +27,16 @@ jobs:
         with:
           ref: gh-pages
           
-      - name: Add Github Pages readme to redirect to index
+      - name: Clear gh-pages files, and add nojekyll & CNAME files
         run: |
+          ls $GITHUB_WORKSPACE
+          rm -r $GITHUB_WORKSPACE/*
+          ls $GITHUB_WORKSPACE
           touch .nojekyll
+          echo -e "recipes.theofleck.com" > CNAME
           
       - name: Deploy 🚀
         run: |
-          ls $GITHUB_WORKSPACE
-          git status
           cp -r $HOME/_site/* $GITHUB_WORKSPACE
           git config user.name github-actions
           git config user.email github-actions@github.com

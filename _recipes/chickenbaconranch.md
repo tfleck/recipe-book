@@ -10,17 +10,6 @@ source: https://www.pillsbury.com/recipes/chicken-bacon-ranch-casserole/7b559c57
 favorite: ✓
 ---
 
-* `1 lb` penne pasta
-* `2 cups` shredded cooked chicken
-* `1 jar (15 oz)` alfredo pasta sauce
-* `1/2 cup` ranch dressing
-* `6 slices` cooked chopped bacon
-* `2 cups (8 oz)` shredded mozzarella cheese
-* ` ` panko breadcrumbs, if desired
-* ` ` chopped parsley, if desired
-
----
-
 | | | |
 |-|-|-|
 | 1 lb | penne pasta |

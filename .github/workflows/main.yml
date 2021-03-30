@@ -34,7 +34,6 @@ jobs:
           echo -e "recipes.theofleck.com" > CNAME          
           
       - name: Deploy 🚀
-        if: ${{ CHANGED }}
         run: |
           cp -r $HOME/_site/* $GITHUB_WORKSPACE
           CHANGED=$(git status --porcelain)

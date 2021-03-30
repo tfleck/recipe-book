@@ -26,9 +26,9 @@ done
 
 function status {
     $QUIET && return
-    BOLD=$(tput bold)
-    NORMAL=$(tput sgr0)
-    echo "${BOLD}$@${NORMAL}"
+    #BOLD=$(tput bold)
+    #NORMAL=$(tput sgr0)
+    echo "$@"
 }
 
 function x {

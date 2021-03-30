@@ -357,6 +357,12 @@ hr {
    /* margin-right: calc(-1 * var(--ingredient-quantity-column-width) - .2em); */  /* to account for space between em and ingredient name */
     min-width: var(--ingredient-quantity-column-width);
 }
+.recipe table {
+    margin: 1rem 0 1rem var(--step-number-column-width);
+}
+.recipe table td {
+    padding-right:10px;
+}
 code {
     font-family: var(--sans);
 }

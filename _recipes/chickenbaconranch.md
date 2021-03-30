@@ -1,5 +1,4 @@
 ---
-
 title: Chicken Bacon Ranch Casserole
 category: Casserole
 description: This casserole is easy to make, tastes great, and reheats really well later.
@@ -9,7 +8,6 @@ time: 1 hour
 author: Theo Fleck
 source: https://www.pillsbury.com/recipes/chicken-bacon-ranch-casserole/7b559c57-b32e-4eeb-971f-a56042ea323a
 favorite: ✓
-
 ---
 
 * `1 lb` penne pasta

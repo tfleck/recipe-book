@@ -19,7 +19,7 @@
     --serif: Lora, Georgia, serif;
 
     --step-number-column-width: 3em;
-    --ingredient-quantity-column-width: 5em;
+    --ingredient-quantity-column-width: 5.6em;
     --ingredient-name-column-width: 10em;
 }
 
@@ -319,7 +319,7 @@ hr {
 .recipe hr + ul {
     display: inline-block;
     margin-left: var(--step-number-column-width);
-    width: calc(var(--ingredient-quantity-column-width) + var(--ingredient-name-column-width));
+    /*width: calc(var(--ingredient-quantity-column-width) + var(--ingredient-name-column-width));*/
     vertical-align: top;
 }
 .recipe hr + ul + blockquote {
@@ -347,14 +347,14 @@ hr {
 }
 .recipe hr + ul li {
     list-style-type: none;
-    text-indent: calc(-1 * var(--ingredient-quantity-column-width));
-    padding-left: var(--ingredient-quantity-column-width);
+    /* text-indent: calc(-1 * var(--ingredient-quantity-column-width)); */
+    /* padding-left: var(--ingredient-quantity-column-width); */
     padding-right: 1em;  /* prevent ingredient names getting too close to the instructions */
 }
 .recipe hr + ul li > code:first-child {
     display: inline-block;
-    margin-left: var(--ingredient-quantity-column-width);
-    margin-right: calc(-1 * var(--ingredient-quantity-column-width) - .2em);  /* to account for space between em and ingredient name */
+   /* margin-left: var(--ingredient-quantity-column-width); */
+   /* margin-right: calc(-1 * var(--ingredient-quantity-column-width) - .2em); */  /* to account for space between em and ingredient name */
     min-width: var(--ingredient-quantity-column-width);
 }
 code {

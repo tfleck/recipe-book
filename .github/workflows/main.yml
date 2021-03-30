@@ -31,13 +31,20 @@ jobs:
         run: |
           rm -r $GITHUB_WORKSPACE/*
           touch .nojekyll
-          echo -e "recipes.theofleck.com" > CNAME
+          echo -e "recipes.theofleck.com" > CNAME          
           
       - name: Deploy 🚀
+        if: ${{ CHANGED }}
         run: |
           cp -r $HOME/_site/* $GITHUB_WORKSPACE
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add -A
-          git commit -m "built site"
-          git push
+          CHANGED=$(git status --porcelain)
+          if [[ $CHANGED ]]; then
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add -A
+            git commit -m "built site"
+            git push
+            echo "pushed site"
+          else
+            echo "site already up to date"
+          fi

@@ -1,0 +1,39 @@
+name: Build and Deploy
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        
+      - name: Install Build Dependencies
+        run: sudo apt-get install -y pandoc
+
+      - name: Build 🔧
+        run: |
+          ls $GITHUB_WORKSPACE
+          git status
+          cd $GITHUB_WORKSPACE
+          chmod +x build.sh
+          bash build.sh .
+          mv _site $HOME/_site
+          
+      - name: Switch to gh-pages branch
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+
+      - name: Deploy 🚀
+        run: |
+          ls $GITHUB_WORKSPACE
+          git status
+          cp $HOME/_site/* $GITHUB_WORKSPACE
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A
+          git commit -m "built site"
+          git push

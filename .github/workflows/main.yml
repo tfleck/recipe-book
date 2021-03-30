@@ -29,9 +29,7 @@ jobs:
           
       - name: Clear gh-pages files, and add nojekyll & CNAME files
         run: |
-          ls $GITHUB_WORKSPACE
           rm -r $GITHUB_WORKSPACE/*
-          ls $GITHUB_WORKSPACE
           touch .nojekyll
           echo -e "recipes.theofleck.com" > CNAME
           

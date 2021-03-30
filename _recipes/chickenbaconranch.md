@@ -5,7 +5,7 @@ description: This casserole is easy to make, tastes great, and reheats really we
 image: chickenbaconranch.jpg
 size: 6 servings
 time: 1 hour
-author: Theo Fleck
+author: Pillsbury
 source: https://www.pillsbury.com/recipes/chicken-bacon-ranch-casserole/7b559c57-b32e-4eeb-971f-a56042ea323a
 favorite: ✓
 ---
@@ -16,8 +16,8 @@ favorite: ✓
 * `1/2 cup` ranch dressing
 * `6 slices` cooked chopped bacon
 * `2 cups (8 oz)` shredded mozzarella cheese
-* panko breadcrumbs, if desired
-* chopped parsley, if desired
+* ` ` panko breadcrumbs, if desired
+* ` ` chopped parsley, if desired
 
 ---
 

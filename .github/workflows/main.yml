@@ -32,7 +32,7 @@ jobs:
           
       - name: Add Github Pages readme to redirect to index
         run: |
-          echo -e "---\npermalink: /index.html\n---" > README.md
+          touch .nojekyll
           
       - name: Deploy 🚀
         run: |

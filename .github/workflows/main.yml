@@ -34,7 +34,7 @@ jobs:
         run: |
           ls $GITHUB_WORKSPACE
           git status
-          cp $HOME/_site/* $GITHUB_WORKSPACE
+          cp -r $HOME/_site/* $GITHUB_WORKSPACE
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add -A

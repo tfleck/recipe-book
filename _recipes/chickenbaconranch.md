@@ -21,6 +21,13 @@ favorite: ✓
 
 ---
 
+| | | |
+|-|-|-|
+| 1 lb | penne pasta |
+| 2 cups (8 oz) | shredded mozzarella cheese |
+
+---
+
 > Cook and drain pasta
 
 ---

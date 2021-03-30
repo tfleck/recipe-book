@@ -29,7 +29,11 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: gh-pages
-
+          
+      - name: Add Github Pages readme to redirect to index
+        run: |
+          echo -e "---\npermalink: /index.html\n---" > README.md
+          
       - name: Deploy 🚀
         run: |
           ls $GITHUB_WORKSPACE

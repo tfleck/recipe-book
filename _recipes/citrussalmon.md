@@ -9,6 +9,8 @@ author: Sara Fleck
 favorite: ✓
 ---
 
+> Ingredients 
+
 | | | |
 |-|-|-|
 | 4  | fresh salmon steaks, 3/4 in. thick |
@@ -16,10 +18,12 @@ favorite: ✓
 | 3/4 cup | chicken broth |
 | 1/2 cup | frozen orange juice concentrate, thawed |
 | 1 tbsp | white wine vinegar |
-|  | Dash of ground red or black pepper, if you prefer |
+|  | dash of ground red or black pepper, if you prefer |
 
 ---
-Ingredients for additional salad, if desired
+
+> Ingredients for additional salad, if desired
+
 | | | |
 |-|-|-|
 | 4 cups | shredded spinach or romaine lettuce |

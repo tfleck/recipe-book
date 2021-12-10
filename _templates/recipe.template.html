@@ -33,10 +33,16 @@
                 $elseif(source)$
                     <li><a href="$source$"><img src="assets/tabler-icons/tabler-icon-link.svg"> $strings.source_label$</a></li>
                 $endif$
+                <!-- remove making meat a default -->
+                <!--
                 $if(veggie)$$else$
                     $if(vegan)$$else$
                         <li><img src="assets/tabler-icons/tabler-icon-meat.svg"> $strings.meat_label$</li>
                     $endif$
+                $endif$
+                -->
+                $if(meat)$
+                    <li><img src="assets/tabler-icons/tabler-icon-meat.svg"> $strings.meat_label$</li>
                 $endif$
                 $if(vegan)$
                     <li><img src="assets/tabler-icons/tabler-icon-leaf.svg"> $strings.vegan_label$</li>

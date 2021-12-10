@@ -9,7 +9,6 @@ time: 1 hour
 author: Maangchi
 source: https://www.youtube.com/watch?v=T9uI1-6Ac6A
 spicy: ✓
-favorite: ✓
 ---
 
 * `2 tbsp` chili flakes (gochugaru)

@@ -2,10 +2,11 @@
 title: Citrus Sauced Salmon
 category: Fish
 description: Easy way to prepare delicious salmon
-image: citrussalmon.jpg
+image: citrus-salmon.jpg
 size: 4 servings
 time: 15 minutes
 author: Sara Fleck
+source: https://www.getrecipebox.com/users/recipes/5f761a8ff090590015804df3
 favorite: ✓
 ---
 

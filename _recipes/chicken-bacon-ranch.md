@@ -2,7 +2,7 @@
 title: Chicken Bacon Ranch Casserole
 category: Casserole
 description: This casserole is easy to make, tastes great, and reheats really well later.
-image: chickenbaconranch.jpg
+image: chicken-bacon-ranch.jpg
 size: 6 servings
 time: 1 hour
 author: Pillsbury

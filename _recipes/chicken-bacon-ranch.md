@@ -1,6 +1,6 @@
 ---
 title: Chicken Bacon Ranch Casserole
-category: Casserole
+category: Pasta
 description: This casserole is easy to make, tastes great, and reheats really well later.
 image: chicken-bacon-ranch.jpg
 size: 6 servings

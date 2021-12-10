@@ -13,12 +13,12 @@ favorite: ✓
 
 | | | |
 |-|-|-|
-| 4  | fresh salmon steaks, 3/4 in. thick |
+| 4 | fresh salmon steaks, 3/4 in. thick |
 | 1 tbsp | cornstarch |
 | 3/4 cup | chicken broth |
 | 1/2 cup | frozen orange juice concentrate, thawed |
 | 1 tbsp | white wine vinegar |
-|  | dash of ground red or black pepper, if you prefer |
+| | dash of ground red or black pepper, if you prefer |
 
 ---
 

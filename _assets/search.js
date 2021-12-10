@@ -19,24 +19,39 @@ fetch("search.json")
 
 // search the "index" for a query string while assigning different weights depending on which parts of the json value the query appears in
 function search(query) {
-    const matches = (haystack, needle) => (haystack || "").toLowerCase().includes(needle.toLowerCase());
-    const matchesStart = (haystack, needle) => (haystack || "").toLowerCase().startsWith(needle.toLowerCase());
+    const matchesEvery = (haystack, needle) => {
+        let lowerHaystack = (haystack || "").toLowerCase();
+        return needle.toLowerCase().split(/[\s,]+/).every(word => lowerHaystack.includes(word));
+    };
+    const matchesAny = (haystack, needle) => {
+        let lowerHaystack = (haystack || "").toLowerCase();
+        return needle.toLowerCase().split(/[\s,]+/).some(word => lowerHaystack.includes(word));
+    };
+    const matchesExact = (haystack, needle) => {
+        let lowerHaystack = (haystack || "").toLowerCase();
+        return lowerHaystack.includes(needle.toLowerCase());
+    };
+    const matchesStart = (haystack, needle) => {
+        let lowerHaystack = (haystack || "").toLowerCase();
+        return lowerHaystack.startsWith(needle.toLowerCase());
+    };
 
     let results = [];
     searchIndex.forEach(e => {
         let score = 0;
-        if (matches(e.title, query)) score += 20;
-        if (matches(e["original_title"], query)) score += 10;
-        if (matches(e["category"], query)) score += 5;
-        if (matches(e["author"], query)) score += 5;
-        if (matches(e["description"], query)) score += 2;
-        if (matches(e["htmlfile"], query)) score += 1;
+        if (matchesEvery(e["title"], query)) score += 20;
+        if (matchesEvery(e["original_title"], query)) score += 10;
+        if (matchesEvery(e["category"], query)) score += 5;
+        if (matchesEvery(e["author"], query)) score += 5;
+        if (matchesEvery(e["description"], query)) score += 2;
+        if (matchesEvery(e["htmlfile"], query)) score += 1;
 
-        // boost favories a little
+        // significantly increase score if the query occurs right at the start of the (original) title
+        if (matchesStart(e["title"], query)) score += 10;
+        if (matchesStart(e["original_title"], query)) score += 5;
+
+        // boost favorites a little
         if (score > 0 && e["favorite"]) score += 2;
-
-        // slightly increase score if the query occurs right at the start of the title
-        if (matchesStart(e.title, query)) score += 3;
 
         results.push({score: score, e: e});
     });
@@ -68,9 +83,14 @@ function showResults(results) {
             + `<h3>`
             + `<i class="icons">`
             + (e.favorite ? `<img src="assets/tabler-icons/tabler-icon-star.svg"> ` : ``)
-            + (e.spicy ? `<img src="assets/tabler-icons/tabler-icon-flame.svg"> ` : ``)
-            + ((e.veggie || e.vegan) ? `` : `<img src="assets/tabler-icons/tabler-icon-bone.svg"> `)
+            + ((e.veggie || e.vegan) ? `` : `<img src="assets/tabler-icons/tabler-icon-meat.svg"> `)
             + (e.vegan ? `<img src="assets/tabler-icons/tabler-icon-leaf.svg"> ` : ``)
+            + (e.spicy ? `<img src="assets/tabler-icons/tabler-icon-pepper.svg"> ` : ``)
+            + (e.sweet ? `<img src="assets/tabler-icons/tabler-icon-candy.svg"> ` : ``)
+            + (e.salty ? `<img src="assets/tabler-icons/tabler-icon-salt.svg"> ` : ``)
+            + (e.sour ? `<img src="assets/tabler-icons/tabler-icon-lemon.svg"> ` : ``)
+            + (e.bitter ? `<img src="assets/tabler-icons/tabler-icon-coffee.svg"> ` : ``)
+            + (e.umami ? `<img src="assets/tabler-icons/tabler-icon-mushroom.svg"> ` : ``)
             + `</i>`
             + `<span>${e.title}</span> `
             + (e.original_title ? `<em>${e.original_title}</em>` : ``)

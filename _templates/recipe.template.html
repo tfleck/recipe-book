@@ -11,7 +11,7 @@
                 <nav>
                     <a href="/"><img class="logo" src="assets/logo.svg"></a>
                     <i>⟩</i>
-                    $if(category)$$category$ <i>⟩</i>$endif$
+                    $if(category)$<a href="${category_faux_urlencoded}.html">$category$</a> <i>⟩</i>$endif$
                 </nav>
                 <h1><span>$title$$if(favorite)$<sup>★</sup>$endif$</span> $if(original_title)$<em>$original_title$</em>$endif$</h1>
             </div>
@@ -30,27 +30,64 @@
                         <img src="assets/tabler-icons/tabler-icon-user.svg"> $author$
                         $endif$
                     </li>
-                $elseif(url)$
-                    <li><a href="$url$"><img src="assets/tabler-icons/tabler-icon-link.svg"> $strings.source_label$</a></li>
-                $endif$
-                $if(spicy)$
-                    <li><img src="assets/tabler-icons/tabler-icon-flame.svg"> $strings.spicy_label$</li>
+                $elseif(source)$
+                    <li><a href="$source$"><img src="assets/tabler-icons/tabler-icon-link.svg"> $strings.source_label$</a></li>
                 $endif$
                 $if(veggie)$$else$
                     $if(vegan)$$else$
-                        <li><img src="assets/tabler-icons/tabler-icon-bone.svg"> $strings.meat_label$</li>
+                        <li><img src="assets/tabler-icons/tabler-icon-meat.svg"> $strings.meat_label$</li>
                     $endif$
                 $endif$
                 $if(vegan)$
                     <li><img src="assets/tabler-icons/tabler-icon-leaf.svg"> $strings.vegan_label$</li>
                 $endif$
+                $if(spicy)$
+                    <li><img src="assets/tabler-icons/tabler-icon-pepper.svg"> $strings.spicy_label$</li>
+                $endif$
+                $if(sweet)$
+                    <li><img src="assets/tabler-icons/tabler-icon-candy.svg"> $strings.sweet_label$</li>
+                $endif$
+                $if(salty)$
+                    <li><img src="assets/tabler-icons/tabler-icon-salt.svg"> $strings.salty_label$</li>
+                $endif$
+                $if(sour)$
+                    <li><img src="assets/tabler-icons/tabler-icon-lemon.svg"> $strings.sour_label$</li>
+                $endif$
+                $if(bitter)$
+                    <li><img src="assets/tabler-icons/tabler-icon-coffee.svg"> $strings.bitter_label$</li>
+                $endif$
+                $if(umami)$
+                    <li><img src="assets/tabler-icons/tabler-icon-mushroom.svg"> $strings.umami_label$</li>
+                $endif$
             </ul>
+            $if(nutrition)$
+                <p class="nutrition">
+                    <img src="assets/tabler-icons/tabler-icon-clipboard-list.svg">
+                    ${for(nutrition)}
+                        $it$
+                        ${ sep }·
+                    ${endfor}
+                </p>
+            $endif$
             $if(description)$
                 <p>$description$</p>
             $endif$
         </header>
         $if(image)$
-            <img src="$image$" class="servingsuggestion">
+            <div class="servingsuggestion">
+                $if(image_source)$
+                    <a href="$image_source$">
+                $endif$
+                <img src="$image$">
+                $if(image_attribution)$
+                    <div class="attribution">
+                        $image_attribution$
+                    </div>
+                $endif$
+                $if(image_source)$
+                    </a>
+                $endif$
+            </div>
         $endif$
         <section>
             <hr>

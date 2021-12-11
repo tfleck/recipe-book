@@ -2,8 +2,8 @@
 title: Cinnamon Puff Cookies
 category: Bakery
 description: Luciana's recipe for cinnamon puff cookies
-size: 12 servings
-time: 20 minutes
+size: 16 servings
+time: 30 minutes
 author: Luciana Vernola
 ---
 
@@ -11,7 +11,7 @@ author: Luciana Vernola
 
 | | | |
 |-|-|-|
-| 34 cup | softened butter (1 1/2 sticks) |
+| 3/4 cup | softened butter (1 1/2 sticks) |
 | 3/4 cup | sugar |
 | 1/4 cup | powdered sugar |
 | 2 | large eggs |

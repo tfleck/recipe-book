@@ -29,7 +29,7 @@ author: Grandma Vernola
 | 1/2 cup | white sugar |
 | 2 tsp | brown sugar |
 | 1/2 cup | chopped walnuts |
-| 2 tsp| cinnamon |
+| 2 tsp | cinnamon |
 
 ---
 

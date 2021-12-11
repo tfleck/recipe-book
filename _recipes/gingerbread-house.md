@@ -21,6 +21,11 @@ author: Luciana Vernola
 | 1 cup | vegetable shortening |
 | 1 cup | sugar |
 | 1/2 cup | molasses |
+| 1 can | vanilla frosting |
+| | gumdrops |
+| | peppermints |
+| | candy canes |
+| | other decorative candies |
 
 ---
 
@@ -48,4 +53,4 @@ author: Luciana Vernola
 
 ---
 
-> Assemble gingerbread house with icing and decorate with candies
+> Assemble gingerbread house with frosting and decorate with candies

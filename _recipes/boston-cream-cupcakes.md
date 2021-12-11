@@ -43,7 +43,7 @@ author: Luciana Vernola
 
 ---
 
-> Cream the butter and sugar, then add the vanilla, and beat some more
+> Cream the butter and sugar, then add the vanilla, and beat it some more
 
 ---
 

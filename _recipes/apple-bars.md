@@ -5,7 +5,6 @@ description: Luciana's recipe for apple bars
 size: 12 servings
 time: 30 minutes
 author: Luciana Vernola
-favorite: x
 ---
 
 > Ingredients

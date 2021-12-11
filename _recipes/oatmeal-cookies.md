@@ -5,7 +5,6 @@ description: Luciana's recipe for oatmeal cookies
 size: 12 servings
 time: 20 minutes
 author: Luciana Vernola
-favorite: x
 ---
 
 > Ingredients

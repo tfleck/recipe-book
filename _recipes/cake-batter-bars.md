@@ -5,7 +5,6 @@ description: Luciana's recipe for cake batter cake bars
 size: 12 servings
 time: 40 minutes
 author: Luciana Vernola
-favorite: x
 ---
 
 > Ingredients

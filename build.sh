@@ -26,9 +26,10 @@ done
 
 function status {
     $QUIET && return
-    BOLD=$(tput bold)
-    NORMAL=$(tput sgr0)
-    echo "${BOLD}$*${NORMAL}"
+    # Commented here to remove tput styling error
+    #BOLD=$(tput bold)
+    #NORMAL=$(tput sgr0)
+    echo "$@" # modified to accomodate tput being commented out
 }
 
 function x {
